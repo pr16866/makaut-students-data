@@ -3,7 +3,7 @@ const router=require("./backendcode/router");
 
 const path=require("path");
 
-const port=process.env.PORT||80;
+const port=process.env.PORT || 80;
 const app=express();
 
 
