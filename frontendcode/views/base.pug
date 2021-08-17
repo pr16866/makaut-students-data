@@ -1,0 +1,49 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title #{title}
+    link(rel="stylesheet", href="../css/base.css")  
+    block style
+nav
+   .nav
+      ul
+         li
+            a(href='/') Home
+         li
+            a(href='')
+               | cse
+            ul
+              
+               li
+                 
+                  a(href='/cse_1st') 1st year
+               li
+                  a(href='/cse_2nd') 2nd year
+               li
+                  a(href='/cse_3rd') 3rd year
+               li
+                  a(href='/cse_4th') 4th year
+         li
+            a(href='')
+               | it
+            ul
+               li
+                  a(href='/it_1st') 1st year
+               li
+                  a(href='/it_2nd') 2nd year
+               li
+                  a(href='/it_3rd') 3rd year
+               li
+                  a(href='/it_4th') 4th year
+   .login
+      li
+         a(href='') login 
+      li
+         a(href="/form") register             
+block content
+.footer 
+   p copywright ©:-All Rights Reserved designed and developed by piyush thakur
+block script 

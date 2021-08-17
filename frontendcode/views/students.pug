@@ -1,0 +1,30 @@
+extends base.pug 
+block append  style
+    link(rel='stylesheet' href='../css/students.css') 
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css' integrity='sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==' crossorigin='anonymous' referrerpolicy='no-referrer')
+block content 
+    .cont
+       h1 #{h1}
+       each data in show_data   
+        .flip-card
+          .flip-card-inner
+            .flip-card-front
+              img(src=data.image alt='Avatar')
+              p= data.name
+              span #{data.city},#{data.state} 
+            .flip-card-back
+              .card-back-item
+                -var name=data.name
+                 p connect with #{name}   on :- 
+                 br
+                 a(href=data.fb)
+                   i.fab.fa-facebook-square
+                 a(href=data.instagram)
+                   i.fab.fa-instagram-square
+                 a(href=data.linkdin)
+                   i.fab.fa-linkedin
+                 a(href=data.email)
+                   i.fas.fa-envelope
+  
+
+

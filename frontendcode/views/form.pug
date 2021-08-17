@@ -1,0 +1,100 @@
+extends base.pug
+block append style 
+      link(rel='stylesheet' href='./css/form.css')
+      link(href='//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet')
+block content
+  .body
+      h2 Please fill this form
+      br
+      .form
+        form(action='/form' method="post" onsubmit='return validation()' enctype="multipart/form-data")
+          // html for name
+          | Name 
+          span.required *
+          input(type='text' name='name' placeholder='Enter your name ')
+          i.fa.fa-check-circle.i1
+          i.fa.fa-exclamation-circle.i1
+          span.label
+          // html for email
+          | email 
+          span.required *
+          input(type='email' name='email' placeholder='Enter your email')
+          span.label
+          i.fa.fa-exclamation-circle.i2
+          i.fa.fa-check-circle.i2
+          // html for branch
+          | Select your branch 
+          span.required *
+          .branch
+            | Cse 
+            input(type='radio' name='branch' id='' value='cse')
+            |                 It 
+            input(type='radio' name='branch' id='' value='it')
+          span.label
+          i.fa.fa-exclamation-circle.i3
+          i.fa.fa-check-circle.i3
+           // html for year
+          label(for='year-select')
+            | Choose your year:
+            span.required *
+          select#year-select(name='year')
+             option(value='') --Please select your year --
+             option(value='1st') 1st year
+             option(value='2nd') 2nd year
+             option(value='3rd') 3rd year
+             option(value='4th') 4th year
+          span.label
+          i.fa.fa-exclamation-circle.i4
+          i.fa.fa-check-circle.i4
+          // html for image
+          | Select your image 
+          span.required *
+          input(type='file' name='image')
+          span.label
+          i.fa.fa-exclamation-circle.i5
+          i.fa.fa-check-circle.i5
+          // html for interested in
+          | Are You a 
+          span.required *
+          input(type='text' name='interested_in' placeholder='developer or program')
+          span.label
+          i.fa.fa-exclamation-circle.i6
+          i.fa.fa-check-circle.i6
+          // html for state
+          | State 
+          span.required *
+          input(type='text' name='state' placeholder='enter your state')
+          span.label
+          i.fa.fa-exclamation-circle.i7
+          i.fa.fa-check-circle.i7
+          // html for city
+          | City 
+          span.required *
+          input(type='text' name='city' placeholder='enter your city')
+          span.label
+          i.fa.fa-exclamation-circle.i8
+          i.fa.fa-check-circle.i8
+          // html for insta
+          | Instsgram Link
+          input(type='text' name='instagram' placeholder='enter your instagram link')
+          i.fa.fa-check-circle.i9
+          br
+          // html for fb
+          | Fb Link
+          input(type='text' name='fb' placeholder='enter your  link')
+          i.fa.fa-check-circle.i10
+          br
+          // html for github
+          | Portfolio/Github link
+          input(type='text' name='github' placeholder='enter your Github link')
+          i.fa.fa-check-circle.i11
+          br
+          // html for likdin
+          | Linkdin
+          input(type='text' name='linkdin' placeholder='enter your linkdin link')
+          i.fa.fa-check-circle.i12
+          br
+          input#btn(type='submit' value='submit')
+          br         
+block script          
+      script(src='./js/validate.js')
